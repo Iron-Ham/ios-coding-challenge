@@ -83,14 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC6F03A71BD07CFD00276405 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		DCEE73E31BD03D9900410865 = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +108,7 @@
 		DCEE73EE1BD03D9900410865 /* Coding_Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				DC6F03A71BD07CFD00276405 /* Models */,
+				DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */,
 				DCEE73EF1BD03D9900410865 /* AppDelegate.swift */,
 				DCEE73F11BD03D9900410865 /* ViewController.swift */,
 				DCEE73F31BD03D9900410865 /* Main.storyboard */,

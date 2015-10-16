@@ -2,14 +2,19 @@
 //  Response.swift
 //  Coding_Challenge
 //
+//  Using the ObjectMapper library to map the objects. 
+//  ObjectMapper Docs: https://github.com/Hearst-DD/ObjectMapper
+//  AlamofireObjectMapper: https://github.com/tristanhimmelman/AlamofireObjectMapper
+//
 //  Created by Hesham Salman on 10/15/15.
 //  Copyright © 2015 Hesham Salman. All rights reserved.
 //
 
 import Foundation
+import AlamofireObjectMapper
 import ObjectMapper
 
-class Response: Mappable {
+class ApiResponse: Mappable {
     var mixSet: MixSet?
     var status: String?
     var errors: NSObject?
@@ -22,12 +27,12 @@ class Response: Mappable {
     }
     
     func mapping(map: Map) {
-        mixSet <- map["mix_set"]
-        status <- map["status"]
-        errors <- map["errors"]
-        notices <- map["notice"]
-        logged_in <- map["logged_in"]
-        apiVersion <- map["api_version"]
+        mixSet      <-  map["mix_set"]
+        status      <-  map["status"]
+        errors      <-  map["errors"]
+        notices     <-  map["notice"]
+        logged_in   <-  map["logged_in"]
+        apiVersion  <-  map["api_version"]
     }
 }
 
@@ -47,15 +52,15 @@ class MixSet: Mappable {
     }
     
     func mapping(map: Map) {
-        mixes <- map["mixes"]
-        pagination <- map["pagination"]
-        smartId <- map["smart_id"]
-        smartType <- map["smart_type"]
-        path <- map["path"]
-        name <- map["name"]
-        webPath <- map["web_path"]
-        sort <- map["sort"]
-        playbackStaysInSet <- map["playback_stays_in_set"]
+        mixes               <-  map["mixes"]
+        pagination          <-  map["pagination"]
+        smartId             <-  map["smart_id"]
+        smartType           <-  map["smart_type"]
+        path                <-  map["path"]
+        name                <-  map["name"]
+        webPath             <-  map["web_path"]
+        sort                <-  map["sort"]
+        playbackStaysInSet  <-  map["playback_stays_in_set"]
     }
 }
 
@@ -74,14 +79,14 @@ class Pagination: Mappable {
     }
     
     func mapping(map: Map) {
-        currentPage <- map["current_page"]
-        perPage <- map["per_page"]
-        offsetBy <- map["offset_by"]
-        nextPage <- map["next_page"]
-        previousPage <- map["previous_page"]
-        totalEntries <- map["total_entries"]
-        totalPages <- map["total_pages"]
-        nextPagePath <- map["next_page_path"]
+        currentPage     <-  map["current_page"]
+        perPage         <-  map["per_page"]
+        offsetBy        <-  map["offset_by"]
+        nextPage        <-  map["next_page"]
+        previousPage    <-  map["previous_page"]
+        totalEntries    <-  map["total_entries"]
+        totalPages      <-  map["total_pages"]
+        nextPagePath    <-  map["next_page_path"]
     }
 }
 
@@ -114,28 +119,28 @@ class Mix: Mappable {
     }
     
     func mapping(map: Map) {
-        user <- map["user"]
-        id <- map["id"]
-        path <- map["path"]
-        webPath <- map["web_path"]
-        name <- map["name"]
-        userId <- map["user_id"]
-        published <- map["published"]
-        unlisted <- map["unlisted"]
-        readOnly <- map["read_only"]
-        coverUrls <- map["cover_urls"]
-        description <- map["description"]
-        playsCount <- map["plays_count"]
-        tagListCache <- map["tag_list_cache"]
-        firstPublishedAt <- (map["first_published_at"], DateTransform())
-        firstPublishedAtTimestamp <- map["first_published_at_timestamp"]
-        likesCount <- map["likes_count"]
-        certification <- map["certification"]
-        isPromoted <- map["is_promoted"]
-        duration <- map["duration"]
-        tracksCount <- map["tracks_count"]
-        colorPalette <- map["color_palette"]
-        artistList <- map["artist_list"]
+        user                        <-  map["user"]
+        id                          <-  map["id"]
+        path                        <-  map["path"]
+        webPath                     <-  map["web_path"]
+        name                        <-  map["name"]
+        userId                      <-  map["user_id"]
+        published                   <-  map["published"]
+        unlisted                    <-  map["unlisted"]
+        readOnly                    <-  map["read_only"]
+        coverUrls                   <-  map["cover_urls"]
+        description                 <-  map["description"]
+        playsCount                  <-  map["plays_count"]
+        tagListCache                <-  map["tag_list_cache"]
+        firstPublishedAt            <-  (map["first_published_at"], DateTransform())
+        firstPublishedAtTimestamp   <-  map["first_published_at_timestamp"]
+        likesCount                  <-  map["likes_count"]
+        certification               <-  map["certification"]
+        isPromoted                  <-  map["is_promoted"]
+        duration                    <-  map["duration"]
+        tracksCount                 <-  map["tracks_count"]
+        colorPalette                <-  map["color_palette"]
+        artistList                  <-  map["artist_list"]
     }
 }
 
@@ -161,21 +166,21 @@ class CoverUrls: Mappable {
     }
     
     func mapping(map: Map) {
-        original <- map["original"]
-        originalImgixUrl <- map["original_imgix_url"]
-        staticCroppedImgixUrl <- map["static_cropped_imgix_url"]
-        croppedImgixUrl <- map["cropped_imgix_url"]
-        croppedImgixSize <- map["cropped_imgix_size"]
-        sq56 <- map["sq56"]
-        sq72 <- map["sq72"]
-        sq100 <- map["sq100"]
-        sq133 <- map["sq133"]
-        max133w <- map["max133w"]
-        max200 <- map["max200"]
-        sq250 <- map["sq250"]
-        sq500 <- map["sq500"]
-        max1024 <- map["max1024"]
-        animated <- map["animated"]
+        original                <-  map["original"]
+        originalImgixUrl        <-  map["original_imgix_url"]
+        staticCroppedImgixUrl   <-  map["static_cropped_imgix_url"]
+        croppedImgixUrl         <-  map["cropped_imgix_url"]
+        croppedImgixSize        <-  map["cropped_imgix_size"]
+        sq56                    <-  map["sq56"]
+        sq72                    <-  map["sq72"]
+        sq100                   <-  map["sq100"]
+        sq133                   <-  map["sq133"]
+        max133w                 <-  map["max133w"]
+        max200                  <-  map["max200"]
+        sq250                   <-  map["sq250"]
+        sq500                   <-  map["sq500"]
+        max1024                 <-  map["max1024"]
+        animated                <-  map["animated"]
     }
 }
 
@@ -192,12 +197,12 @@ class User: Mappable {
     }
     
     func mapping(map: Map) {
-        id <- map["id"]
-        login <- map["login"]
-        path <- map["path"]
-        webPath <- map["web_path"]
-        avatarUrls <- map["avatar_urls"]
-        colorPalette <- map["color_palette"]
+        id              <-  map["id"]
+        login           <-  map["login"]
+        path            <-  map["path"]
+        webPath         <-  map["web_path"]
+        avatarUrls      <-  map["avatar_urls"]
+        colorPalette    <-  map["color_palette"]
     }
 }
 
@@ -224,21 +229,21 @@ class AvatarUrls: Mappable {
     }
     
     func mapping(map: Map) {
-        original <- map["original"]
-        originalImgixUrl <- map["original_imgix_url"]
-        staticCroppedImgixUrl <- map["static_cropped_imgix_url"]
-        croppedImgixUrl <- map["cropped_imgix_url"]
-        croppedImgixSize <- map["cropped_imgix_size"]
-        sq56 <- map["sq56"]
-        sq72 <- map["sq72"]
-        sq100 <- map["sq100"]
-        sq200 <- map["sq200"]
-        sq400 <- map["sq400"]
-        sq640 <- map["sq640"]
-        sq750 <- map["sq750"]
-        max200 <- map["max200"]
-        max250w <- map["max250w"]
-        discourse <- map["discourse"]
-        animated <- map["animated"]
+        original                <-  map["original"]
+        originalImgixUrl        <-  map["original_imgix_url"]
+        staticCroppedImgixUrl   <-  map["static_cropped_imgix_url"]
+        croppedImgixUrl         <-  map["cropped_imgix_url"]
+        croppedImgixSize        <-  map["cropped_imgix_size"]
+        sq56                    <-  map["sq56"]
+        sq72                    <-  map["sq72"]
+        sq100                   <-  map["sq100"]
+        sq200                   <-  map["sq200"]
+        sq400                   <-  map["sq400"]
+        sq640                   <-  map["sq640"]
+        sq750                   <-  map["sq750"]
+        max200                  <-  map["max200"]
+        max250w                 <-  map["max250w"]
+        discourse               <-  map["discourse"]
+        animated                <-  map["animated"]
     }
 }
