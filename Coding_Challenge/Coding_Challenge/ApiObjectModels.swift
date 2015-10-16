@@ -140,13 +140,105 @@ class Mix: Mappable {
 }
 
 class CoverUrls: Mappable {
-    <#properties and methods#>
+    var original: String?
+    var originalImgixUrl: String?
+    var staticCroppedImgixUrl: String?
+    var croppedImgixUrl: String?
+    var croppedImgixSize: Int?
+    var sq56: String?
+    var sq72: String?
+    var sq100: String?
+    var sq133: String?
+    var max133w: String?
+    var max200: String?
+    var sq250: String?
+    var sq500: String?
+    var max1024: String?
+    var animated: Bool?
+    
+    required init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    func mapping(map: Map) {
+        original <- map["original"]
+        originalImgixUrl <- map["original_imgix_url"]
+        staticCroppedImgixUrl <- map["static_cropped_imgix_url"]
+        croppedImgixUrl <- map["cropped_imgix_url"]
+        croppedImgixSize <- map["cropped_imgix_size"]
+        sq56 <- map["sq56"]
+        sq72 <- map["sq72"]
+        sq100 <- map["sq100"]
+        sq133 <- map["sq133"]
+        max133w <- map["max133w"]
+        max200 <- map["max200"]
+        sq250 <- map["sq250"]
+        sq500 <- map["sq500"]
+        max1024 <- map["max1024"]
+        animated <- map["animated"]
+    }
 }
 
 class User: Mappable {
-    <#properties and methods#>
+    var id: Int?
+    var login: String?
+    var path: String?
+    var webPath: String?
+    var avatarUrls: AvatarUrls?
+    var colorPalette: [String]?
+    
+    required init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        login <- map["login"]
+        path <- map["path"]
+        webPath <- map["web_path"]
+        avatarUrls <- map["avatar_urls"]
+        colorPalette <- map["color_palette"]
+    }
 }
 
 class AvatarUrls: Mappable {
-    <#properties and methods#>
+    var original: String?
+    var originalImgixUrl: String?
+    var staticCroppedImgixUrl: String?
+    var croppedImgixUrl: String?
+    var croppedImgixSize: Int?
+    var sq56: String?
+    var sq72: String?
+    var sq100: String?
+    var sq200: String?
+    var sq400: String?
+    var sq640: String?
+    var sq750: String?
+    var max200: String?
+    var max250w: String?
+    var discourse: String?
+    var animated: String?
+    
+    required init?(_ map: Map) {
+        mapping(map)
+    }
+    
+    func mapping(map: Map) {
+        original <- map["original"]
+        originalImgixUrl <- map["original_imgix_url"]
+        staticCroppedImgixUrl <- map["static_cropped_imgix_url"]
+        croppedImgixUrl <- map["cropped_imgix_url"]
+        croppedImgixSize <- map["cropped_imgix_size"]
+        sq56 <- map["sq56"]
+        sq72 <- map["sq72"]
+        sq100 <- map["sq100"]
+        sq200 <- map["sq200"]
+        sq400 <- map["sq400"]
+        sq640 <- map["sq640"]
+        sq750 <- map["sq750"]
+        max200 <- map["max200"]
+        max250w <- map["max250w"]
+        discourse <- map["discourse"]
+        animated <- map["animated"]
+    }
 }
