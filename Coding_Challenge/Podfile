@@ -1,0 +1,16 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'Coding_Challenge' do
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'ObjectMapper', '~> 0.19'
+end
+
+target 'Coding_ChallengeTests' do
+
+end
+
+target 'Coding_ChallengeUITests' do
+
+end
+
