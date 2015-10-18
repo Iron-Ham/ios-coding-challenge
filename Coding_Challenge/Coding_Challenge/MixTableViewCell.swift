@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 @IBDesignable
 class MixTableViewCell: UITableViewCell {
@@ -36,20 +37,35 @@ class MixTableViewCell: UITableViewCell {
             self.mix = m
         }
         
+        // "Crop" the image to fit
         mixCoverImage.contentMode = .ScaleAspectFill
         mixCoverImage.clipsToBounds = true
         
-        
+        // Set tag list
         if let tags = mix?.tagListCache {
             tagsLabel.text = tags
         }
         
+        // Set playlist title
         if let title = mix?.name {
             titleLabel.text = title
         }
         
-        // TODO: Info label; NSAttributedString, with FontAwesome.
+        // Get values of likes & plays if available; otherwise set to 0
+        let likesCount = mix?.likesCount ?? 0
+        let playsCount = mix?.playsCount ?? 0
         
+        //Build the attributed string
+        let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(14)] as Dictionary!
+        let infoString = NSMutableAttributedString(string: "\(String.fontAwesomeIconWithName(.Heart)) \(likesCount)    ", attributes: attributes)
+        infoString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location: 0, length: 1))
+        let playsInfo = NSAttributedString(string: "\(String.fontAwesomeIconWithName(.Play)) \(playsCount)", attributes: attributes)
+        infoString.appendAttributedString(playsInfo)
+        
+        //Set the info label
+        infoLabel.attributedText = infoString
+        
+        //Set user name
         if let user = mix?.user?.login {
             usernameLabel.text = user
         }

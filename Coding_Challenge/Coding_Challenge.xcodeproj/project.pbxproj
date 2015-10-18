@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81D0AE4A6DA1BB3B27130613 /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263481CF8ED42708EF792ADD /* Pods_Coding_Challenge.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DC64DC041BD03E19003FDBB1 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64DC031BD03E19003FDBB1 /* RestApiManager.swift */; settings = {ASSET_TAGS = (); }; };
 		DC6F03AF1BD095B200276405 /* ApiObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */; settings = {ASSET_TAGS = (); }; };
 		DC9831871BD3F48900846AAF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9831861BD3F48900846AAF /* ImageLoader.swift */; settings = {ASSET_TAGS = (); }; };
@@ -71,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D0AE4A6DA1BB3B27130613 /* Pods_Coding_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

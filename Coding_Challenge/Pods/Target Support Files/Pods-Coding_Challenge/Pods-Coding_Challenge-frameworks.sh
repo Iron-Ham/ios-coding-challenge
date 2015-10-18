@@ -54,12 +54,14 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Coding_Challenge/Alamofire.framework'
   install_framework 'Pods-Coding_Challenge/AlamofireObjectMapper.framework'
+  install_framework 'Pods-Coding_Challenge/FontAwesome_swift.framework'
   install_framework 'Pods-Coding_Challenge/ObjectMapper.framework'
   install_framework 'Pods-Coding_Challenge/SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Coding_Challenge/Alamofire.framework'
   install_framework 'Pods-Coding_Challenge/AlamofireObjectMapper.framework'
+  install_framework 'Pods-Coding_Challenge/FontAwesome_swift.framework'
   install_framework 'Pods-Coding_Challenge/ObjectMapper.framework'
   install_framework 'Pods-Coding_Challenge/SwiftyJSON.framework'
 fi

@@ -25,14 +25,8 @@ class MixTableViewController: UIViewController {
                 print("Houston, we have a problem (unable to get mixes)");
             }
         }
-        // Do any additional setup after loading the view, typically from a nib.
         let nib = UINib(nibName: "MixTableViewCell", bundle: NSBundle.mainBundle())
         tableView.registerNib(nib, forCellReuseIdentifier: "MixTableViewCell")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
@@ -40,10 +34,12 @@ extension MixTableViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let currentMix = mixes[indexPath.item]
         let cell: MixTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("MixTableViewCell") as! MixTableViewCell
+        
+        // Better to display no image than the wrong image
         cell.avatarImage.image = nil
         cell.mixCoverImage.image = nil
         
-        
+        // Load images from URL or Cache
         ImageLoader.sharedLoader.imageForUrl((currentMix.coverUrls?.croppedImgixUrl)!, completionHandler: { (image: UIImage?, url: String) in
             cell.mixCoverImage.image = image
         })
@@ -52,6 +48,7 @@ extension MixTableViewController : UITableViewDataSource {
             cell.avatarImage.image = image
         })
         
+        // Load text elements in cell
         cell.loadItem(mix: currentMix)
 
         return cell
@@ -64,7 +61,7 @@ extension MixTableViewController : UITableViewDataSource {
 
 extension MixTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 406.0;
+        return 396.0;
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {

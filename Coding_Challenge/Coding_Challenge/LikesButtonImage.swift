@@ -19,6 +19,13 @@ class LikesButtonImage: UIView {
     private let WIDTH: CGFloat = 131.0
     private let HEIGHT: CGFloat = 166.0
     
+    override func drawRect(rect: CGRect) {
+        let scaleWidth = self.bounds.width / WIDTH
+        let scaleHeight = self.bounds.height / HEIGHT
+        self.drawSelf(fillColor: UIColor.redColor(), scaleWidth: scaleWidth, scaleHeight: scaleHeight)
+    }
+    
+    // Generated code (PaintCode) -- function renamed to something human-readable
     func drawSelf(fillColor fillColor: UIColor = UIColor(red: 0.505, green: 0.505, blue: 0.505, alpha: 1.000), scaleWidth: CGFloat = 1, scaleHeight: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
@@ -74,12 +81,5 @@ class LikesButtonImage: UIView {
         "LIKES".drawInRect(labelRect, withAttributes: labelFontAttributes)
         
         CGContextRestoreGState(context)
-    }
-    
-    
-    override func drawRect(rect: CGRect) {
-        let scaleWidth = self.bounds.width / WIDTH
-        let scaleHeight = self.bounds.height / HEIGHT
-        self.drawSelf(fillColor: UIColor.redColor(), scaleWidth: scaleWidth, scaleHeight: scaleHeight)
     }
 }

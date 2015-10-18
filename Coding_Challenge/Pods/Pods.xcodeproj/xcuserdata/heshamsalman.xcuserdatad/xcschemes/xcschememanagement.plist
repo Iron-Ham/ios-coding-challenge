@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FontAwesome.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07F36DAAFD5D9E77D390EE6DFB2092A7</key>
+		<key>0ECEBADD2D4E7EE5B8B1CC9F1DF38973</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>160EE0783C7270D6FBFF1FACA55B49C2</key>
+		<key>1BC475652F6C17199C877935503FF528</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37FB76A473E535505117C06B145DC339</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77295A36CFC386D41B3B9741B3F85046</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7EBF5B775755B2FAFE6C731EF80D4D72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2F4510200FB1C2BE3F09629C9BC024A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E79B809A89FDD0E31AB7D8D696518BCF</key>
+		<key>EB8712CE19B1599E1DEEF24B08BD7818</key>
 		<dict>
 			<key>primary</key>
 			<true/>
