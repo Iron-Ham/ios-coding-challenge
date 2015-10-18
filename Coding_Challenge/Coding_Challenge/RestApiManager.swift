@@ -26,7 +26,7 @@ class RestApiManager : NSObject {
             return "https://8tracks.com/mix_sets/staff-picks.json?api_version=3&api_key=\(API_KEY)&include=mixes[user]+pagination"
         }
     }
-    
+
     func getMixSet(onCompletion: ServiceResponse) {
         Alamofire.request(.GET, BASE_URL, parameters: nil)
             .responseObject { (response: ApiResponse?, error: ErrorType?) in
@@ -37,5 +37,4 @@ class RestApiManager : NSObject {
                 }
         }
     }
-    
 }

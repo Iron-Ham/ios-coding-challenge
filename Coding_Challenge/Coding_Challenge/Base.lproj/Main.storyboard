@@ -1,27 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K1a-EA-ZKK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="zAZ-Hc-eGE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="K1a-EA-ZKK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kr-c1-B7X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6uj-pN-5CO" kind="relationship" relationship="rootViewController" id="VHq-mI-b3k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="131-WU-PNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="907"/>
+        </scene>
+        <!--STAFF PICKS-->
+        <scene sceneID="dOl-4e-yLZ">
+            <objects>
+                <viewController id="6uj-pN-5CO" customClass="MixTableViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="yb2-DU-qxl"/>
+                        <viewControllerLayoutGuide type="bottom" id="0d9-Q0-AWq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Ycu-Yy-ZLd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QtW-1W-oyT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6uj-pN-5CO" id="VUD-j0-RaL"/>
+                                    <outlet property="delegate" destination="6uj-pN-5CO" id="LwN-x8-xWa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="QtW-1W-oyT" secondAttribute="trailing" constant="-20" id="0qA-ef-U90"/>
+                            <constraint firstItem="QtW-1W-oyT" firstAttribute="leading" secondItem="Ycu-Yy-ZLd" secondAttribute="leadingMargin" constant="-20" id="UzI-Ou-OPH"/>
+                            <constraint firstItem="0d9-Q0-AWq" firstAttribute="top" secondItem="QtW-1W-oyT" secondAttribute="bottom" id="taE-Wy-Uo3"/>
+                            <constraint firstItem="QtW-1W-oyT" firstAttribute="top" secondItem="yb2-DU-qxl" secondAttribute="bottom" id="vho-wJ-ici"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="STAFF PICKS" id="Ojg-23-zgk"/>
+                    <connections>
+                        <outlet property="tableView" destination="QtW-1W-oyT" id="EQE-ZS-iyh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJF-uL-zND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="750" y="907"/>
         </scene>
     </scenes>
 </document>

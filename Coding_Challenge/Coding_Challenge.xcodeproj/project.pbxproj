@@ -10,8 +10,12 @@
 		18F6D5259DBB0D6AE4DCF4EA /* Pods_Coding_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263481CF8ED42708EF792ADD /* Pods_Coding_Challenge.framework */; };
 		DC64DC041BD03E19003FDBB1 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64DC031BD03E19003FDBB1 /* RestApiManager.swift */; settings = {ASSET_TAGS = (); }; };
 		DC6F03AF1BD095B200276405 /* ApiObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */; settings = {ASSET_TAGS = (); }; };
+		DCA142601BD194F30059AED6 /* MixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1425E1BD194F30059AED6 /* MixTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		DCA142611BD194F30059AED6 /* MixTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA1425F1BD194F30059AED6 /* MixTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		DCA142651BD1A19C0059AED6 /* LikesButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA142641BD1A19C0059AED6 /* LikesButtonImage.swift */; settings = {ASSET_TAGS = (); }; };
+		DCA142671BD1A3630059AED6 /* MixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA142661BD1A3630059AED6 /* MixViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DCEE73F01BD03D9900410865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE73EF1BD03D9900410865 /* AppDelegate.swift */; };
-		DCEE73F21BD03D9900410865 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE73F11BD03D9900410865 /* ViewController.swift */; };
+		DCEE73F21BD03D9900410865 /* MixTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE73F11BD03D9900410865 /* MixTableViewController.swift */; };
 		DCEE73F51BD03D9900410865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEE73F31BD03D9900410865 /* Main.storyboard */; };
 		DCEE73F71BD03D9900410865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCEE73F61BD03D9900410865 /* Assets.xcassets */; };
 		DCEE73FA1BD03D9900410865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEE73F81BD03D9900410865 /* LaunchScreen.storyboard */; };
@@ -42,9 +46,13 @@
 		A0FE8B3CC31513305BA9E19F /* Pods-Coding_Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding_Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coding_Challenge/Pods-Coding_Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		DC64DC031BD03E19003FDBB1 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiObjectModels.swift; sourceTree = "<group>"; };
+		DCA1425E1BD194F30059AED6 /* MixTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixTableViewCell.swift; sourceTree = "<group>"; };
+		DCA1425F1BD194F30059AED6 /* MixTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MixTableViewCell.xib; sourceTree = "<group>"; };
+		DCA142641BD1A19C0059AED6 /* LikesButtonImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesButtonImage.swift; sourceTree = "<group>"; };
+		DCA142661BD1A3630059AED6 /* MixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixViewController.swift; sourceTree = "<group>"; };
 		DCEE73EC1BD03D9900410865 /* Coding_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coding_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEE73EF1BD03D9900410865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCEE73F11BD03D9900410865 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DCEE73F11BD03D9900410865 /* MixTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixTableViewController.swift; sourceTree = "<group>"; };
 		DCEE73F41BD03D9900410865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCEE73F61BD03D9900410865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCEE73F91BD03D9900410865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,12 +118,16 @@
 			children = (
 				DC6F03AE1BD095B200276405 /* ApiObjectModels.swift */,
 				DCEE73EF1BD03D9900410865 /* AppDelegate.swift */,
-				DCEE73F11BD03D9900410865 /* ViewController.swift */,
+				DCEE73F11BD03D9900410865 /* MixTableViewController.swift */,
 				DCEE73F31BD03D9900410865 /* Main.storyboard */,
 				DCEE73F61BD03D9900410865 /* Assets.xcassets */,
 				DCEE73F81BD03D9900410865 /* LaunchScreen.storyboard */,
 				DCEE73FB1BD03D9900410865 /* Info.plist */,
 				DC64DC031BD03E19003FDBB1 /* RestApiManager.swift */,
+				DCA1425E1BD194F30059AED6 /* MixTableViewCell.swift */,
+				DCA1425F1BD194F30059AED6 /* MixTableViewCell.xib */,
+				DCA142641BD1A19C0059AED6 /* LikesButtonImage.swift */,
+				DCA142661BD1A3630059AED6 /* MixViewController.swift */,
 			);
 			path = Coding_Challenge;
 			sourceTree = "<group>";
@@ -263,6 +275,7 @@
 			files = (
 				DCEE73FA1BD03D9900410865 /* LaunchScreen.storyboard in Resources */,
 				DCEE73F71BD03D9900410865 /* Assets.xcassets in Resources */,
+				DCA142611BD194F30059AED6 /* MixTableViewCell.xib in Resources */,
 				DCEE73F51BD03D9900410865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA142651BD1A19C0059AED6 /* LikesButtonImage.swift in Sources */,
+				DCA142671BD1A3630059AED6 /* MixViewController.swift in Sources */,
 				DC6F03AF1BD095B200276405 /* ApiObjectModels.swift in Sources */,
-				DCEE73F21BD03D9900410865 /* ViewController.swift in Sources */,
+				DCEE73F21BD03D9900410865 /* MixTableViewController.swift in Sources */,
 				DCEE73F01BD03D9900410865 /* AppDelegate.swift in Sources */,
 				DC64DC041BD03E19003FDBB1 /* RestApiManager.swift in Sources */,
+				DCA142601BD194F30059AED6 /* MixTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
