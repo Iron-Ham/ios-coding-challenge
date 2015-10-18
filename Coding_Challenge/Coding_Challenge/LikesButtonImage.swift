@@ -2,6 +2,10 @@
 //  LikesButtonImage.swift
 //  Coding_Challenge
 //
+//  Asset created by using Sketch, FontAwesome, and PaintCode
+//  Sketch: Import Font-Awesome Icon, Add Text, export as SVG
+//  PaintCode: Import SVG, Export as Swift code
+//
 //  Created by Hesham Salman on 10/16/15.
 //  Copyright © 2015 Hesham Salman. All rights reserved.
 //
@@ -24,11 +28,8 @@ class LikesButtonImage: UIView {
         CGContextTranslateCTM(context, 0, 0.03)
         CGContextScaleCTM(context, scaleWidth, scaleHeight)
         
-        
-        
         //// likes_button
         //// fa-heart
-        
         
         //// Fill-180 Drawing
         let fill180Path = UIBezierPath()
@@ -63,7 +64,6 @@ class LikesButtonImage: UIView {
         fillColor.setFill()
         fill180Path.fill()
         
-        
         //// Label Drawing
         let labelRect = CGRectMake(2, 107.97, 129, 58)
         let labelStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
@@ -72,10 +72,6 @@ class LikesButtonImage: UIView {
         let labelFontAttributes = [NSFontAttributeName: UIFont(name: "Helvetica-Light", size: 46)!, NSForegroundColorAttributeName: fillColor, NSParagraphStyleAttributeName: labelStyle]
         
         "LIKES".drawInRect(labelRect, withAttributes: labelFontAttributes)
-        
-        
-        
-        
         
         CGContextRestoreGState(context)
     }

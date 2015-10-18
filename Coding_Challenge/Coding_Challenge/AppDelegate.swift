@@ -2,6 +2,7 @@
 //  AppDelegate.swift
 //  Coding_Challenge
 //
+//  TODO: Add proper exception to the ApplicationTransport!!
 //  Created by Hesham Salman on 10/15/15.
 //  Copyright © 2015 Hesham Salman. All rights reserved.
 //
