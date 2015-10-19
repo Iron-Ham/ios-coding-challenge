@@ -104,7 +104,7 @@ class Mix: Mappable {
     var description: String?
     var playsCount: Int?
     var tagListCache: String?
-    var firstPublishedAt: NSDate?
+    var firstPublishedAt: String?
     var firstPublishedAtTimestamp: Int?
     var likesCount: Int?
     var certification: String?
@@ -132,7 +132,7 @@ class Mix: Mappable {
         description                 <-  map["description"]
         playsCount                  <-  map["plays_count"]
         tagListCache                <-  map["tag_list_cache"]
-        firstPublishedAt            <-  (map["first_published_at"], DateTransform())
+        firstPublishedAt            <-  map["first_published_at"]
         firstPublishedAtTimestamp   <-  map["first_published_at_timestamp"]
         likesCount                  <-  map["likes_count"]
         certification               <-  map["certification"]

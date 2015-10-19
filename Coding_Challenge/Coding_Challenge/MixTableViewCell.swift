@@ -17,6 +17,7 @@ class MixTableViewCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 
     var mix: Mix?
     
@@ -55,19 +56,33 @@ class MixTableViewCell: UITableViewCell {
         let likesCount = mix?.likesCount ?? 0
         let playsCount = mix?.playsCount ?? 0
         
-        //Build the attributed string
+        // Build the attributed string
         let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(14)] as Dictionary!
         let infoString = NSMutableAttributedString(string: "\(String.fontAwesomeIconWithName(.Heart)) \(likesCount)    ", attributes: attributes)
         infoString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location: 0, length: 1))
         let playsInfo = NSAttributedString(string: "\(String.fontAwesomeIconWithName(.Play)) \(playsCount)", attributes: attributes)
         infoString.appendAttributedString(playsInfo)
         
-        //Set the info label
+        // Set the info label
         infoLabel.attributedText = infoString
         
-        //Set user name
+        // Set user name
         if let user = mix?.user?.login {
             usernameLabel.text = user
+        }
+        
+        // Format and set the dateLabel
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .MediumStyle
+        if let date = mix?.firstPublishedAt {
+            let trimmedDate = date.componentsSeparatedByString("T")[0]
+            let dateComponents = NSDateComponents()
+            let currentComponents = trimmedDate.componentsSeparatedByString("-")
+            dateComponents.year = Int(currentComponents[0])!
+            dateComponents.month = Int(currentComponents[1])!
+            dateComponents.day = Int(currentComponents[2])!
+            let formattedDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)
+            dateLabel.text = formatter.stringFromDate(formattedDate!)
         }
     }
 }

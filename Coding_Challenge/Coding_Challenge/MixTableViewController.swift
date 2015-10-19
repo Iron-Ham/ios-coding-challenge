@@ -2,7 +2,6 @@
 //  MixTableViewController.swift
 //  Coding_Challenge
 //
-//  TODO: Cache the images for each cell, retrieve cached image
 //  Created by Hesham Salman on 10/15/15.
 //  Copyright © 2015 Hesham Salman. All rights reserved.
 //
@@ -64,15 +63,16 @@ extension MixTableViewController: UITableViewDelegate {
         return 396.0;
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("showMix", sender: indexPath)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMix" {
-            let controller = segue.destinationViewController as! MixViewController
-            let index = (sender as! NSIndexPath).item
-            controller.mix = mixes[index]
+            if let indexPath = sender as? NSIndexPath {
+                let controller = segue.destinationViewController as! MixViewController
+                controller.mix = mixes[indexPath.item]
+            }
         }
     }
 }
