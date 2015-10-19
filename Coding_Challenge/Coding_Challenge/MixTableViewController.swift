@@ -60,7 +60,7 @@ extension MixTableViewController : UITableViewDataSource {
 
 extension MixTableViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 396.0;
+        return 390.0;
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -72,6 +72,7 @@ extension MixTableViewController: UITableViewDelegate {
             if let indexPath = sender as? NSIndexPath {
                 let controller = segue.destinationViewController as! MixViewController
                 controller.mix = mixes[indexPath.item]
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
         }
     }

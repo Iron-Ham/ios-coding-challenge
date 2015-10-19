@@ -51,7 +51,7 @@ class MixViewController: UIViewController {
                 for var i = 0; i < artistCount - 1; i++ {
                     artistString += "\(artists[i]), "
                 }
-                artistString += "and \(artists[artistCount - 1])"
+                artistString += "and \(artists.last)"
             } else {
                 artistString = "\(artists[0]), \(artists[1]), \(artists[2]) and \(artistCount - 3) more"
             }
@@ -97,9 +97,6 @@ class MixViewController: UIViewController {
         
         // Set the info label
         infoLabel.attributedText = infoString
-        
-
-        
     }
     
     private func setImageView(imageView: UIImageView, url: String) -> Void {

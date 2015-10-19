@@ -32,7 +32,6 @@ class MixTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //I miss Swift 1.2 # marks -- (#mix: Mix) vs (mix mix: Mix)
     func loadItem(mix mix: Mix?) {
         if let m = mix {
             self.mix = m
