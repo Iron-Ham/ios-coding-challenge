@@ -60,9 +60,9 @@ class MixTableViewCell: UITableViewCell {
         }
         
         // Format and set the dateLabel
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = .MediumStyle
         if let date = mix?.firstPublishedAt {
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .MediumStyle
             let trimmedDate = date.componentsSeparatedByString("T")[0]
             let dateComponents = NSDateComponents()
             let currentComponents = trimmedDate.componentsSeparatedByString("-")
