@@ -16,15 +16,17 @@ class MixViewController: UIViewController {
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var publishDateLabel: UILabel!
+    @IBOutlet weak var datePublishedLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
-    
     var mix: Mix?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.automaticallyAdjustsScrollViewInsets = false
 
+        
         // Set ImageViews
         if let mixCoverUrl = mix?.coverUrls?.croppedImgixUrl {
             setImageView(mixCoverImageView, url: mixCoverUrl)
@@ -74,7 +76,7 @@ class MixViewController: UIViewController {
             dateComponents.month = Int(currentComponents[1])!
             dateComponents.day = Int(currentComponents[2])!
             let formattedDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)
-            publishDateLabel.text = formatter.stringFromDate(formattedDate!)
+            datePublishedLabel.text = formatter.stringFromDate(formattedDate!)
         }
         
         // Set Description
