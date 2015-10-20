@@ -84,21 +84,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1082"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wED-JB-r7l" userLabel="Mix Cover Image">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                <rect key="frame" x="-20" y="0.0" width="620" height="620"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wED-JB-r7l" secondAttribute="height" multiplier="1:1" id="JF8-eT-Gp6"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electro Glitchstep Wonderland, A Symposium of Sonic Solutions, Retroactive Funk Step Wonderland; A Really Long Title." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-RU-AXl" userLabel="Title">
-                                                <rect key="frame" x="8" y="608" width="584" height="153"/>
+                                                <rect key="frame" x="8" y="628" width="584" height="153"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                 <color key="textColor" red="0.1558329977" green="0.1558329977" blue="0.1558329977" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="246" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="IN0-dY-jJZ" userLabel="Tags">
-                                                <rect key="frame" x="8" y="827.5" width="584" height="38.5"/>
+                                                <rect key="frame" x="8" y="848" width="584" height="38.5"/>
                                                 <animations/>
                                                 <string key="text">Glitch, Electronic, Metallic Synth, Trip Hop, Sleeper-Hits, Tag1, Tag2, Tag3, Tag4, Tag5, Tag6, Tag 7, Tag 8, Tag 9, Tag 10, Tag 11, Tag 22, Tag 13</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -116,28 +116,28 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tom User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-94-uuz" userLabel="Username">
-                                                <rect key="frame" x="48" y="1042" width="86" height="32"/>
+                                                <rect key="frame" x="48" y="1042" width="85.5" height="32"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.2177478501" green="0.59232772440000003" blue="0.4066224323" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="244" layoutMarginsFollowReadableWidth="YES" text="{T} PLATINUM {H} 12,345,678 {P} 12,345,678" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="6YV-le-rAJ" userLabel="InfoLabel">
-                                                <rect key="frame" x="8" y="769" width="584" height="19.5"/>
+                                                <rect key="frame" x="8" y="789" width="584" height="19.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daft Lorem, Tame Ipsum, Dolor the Creator, and 22 more..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="U1B-Wc-2rs" userLabel="Artists">
-                                                <rect key="frame" x="8" y="795.5" width="584" height="24"/>
+                                                <rect key="frame" x="8" y="816" width="584" height="24"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 11, 2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-g8-IPC" userLabel="Date Published">
-                                                <rect key="frame" x="480" y="1050" width="112" height="24"/>
+                                                <rect key="frame" x="480" y="1046" width="112" height="24"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="112" id="vbf-fZ-SrM"/>
@@ -147,7 +147,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-IO-NJu" userLabel="Description">
-                                                <rect key="frame" x="8" y="873" width="584" height="161"/>
+                                                <rect key="frame" x="8" y="894" width="584" height="140"/>
                                                 <animations/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed nisi quis odio sagittis aliquam. Integer vulputate pulvinar lacus, id blandit massa vestibulum eu. Curabitur condimentum enim a turpis scelerisque, vitae porttitor quam finibus. Sed auctor gravida nisl, bibendum pretium diam ultricies sed. Duis eu orci mattis, ullamcorper metus nec, finibus leo. Integer mollis eu leo nec commodo. Duis non hendrerit velit, quis mattis neque.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -167,7 +167,8 @@
                                             <constraint firstItem="JLZ-RU-AXl" firstAttribute="top" secondItem="wED-JB-r7l" secondAttribute="bottom" constant="8" id="90p-DE-BjH"/>
                                             <constraint firstItem="U1B-Wc-2rs" firstAttribute="leading" secondItem="Ibw-Ws-Mp2" secondAttribute="leading" constant="8" id="BVf-x1-VXw"/>
                                             <constraint firstItem="6YV-le-rAJ" firstAttribute="top" secondItem="JLZ-RU-AXl" secondAttribute="bottom" constant="8" id="HdX-Ew-2bi"/>
-                                            <constraint firstItem="wED-JB-r7l" firstAttribute="leading" secondItem="Ibw-Ws-Mp2" secondAttribute="leading" id="IUx-J1-cto"/>
+                                            <constraint firstItem="wED-JB-r7l" firstAttribute="leading" secondItem="Ibw-Ws-Mp2" secondAttribute="leading" constant="-20" id="IUx-J1-cto"/>
+                                            <constraint firstItem="Zti-g8-IPC" firstAttribute="centerY" secondItem="5Ni-Wi-4ou" secondAttribute="centerY" id="JvY-J0-SF9"/>
                                             <constraint firstItem="5Ni-Wi-4ou" firstAttribute="leading" secondItem="Ibw-Ws-Mp2" secondAttribute="leading" constant="8" id="LxY-dT-DbB"/>
                                             <constraint firstAttribute="bottom" secondItem="pcd-94-uuz" secondAttribute="bottom" constant="8" id="MA6-Ob-qgN"/>
                                             <constraint firstAttribute="trailing" secondItem="IN0-dY-jJZ" secondAttribute="trailing" constant="8" id="Qwu-tj-gaW"/>
@@ -190,6 +191,11 @@
                                             <constraint firstAttribute="trailing" secondItem="wED-JB-r7l" secondAttribute="trailing" id="p38-bJ-MkS"/>
                                             <constraint firstItem="aGz-IO-NJu" firstAttribute="top" secondItem="IN0-dY-jJZ" secondAttribute="bottom" constant="7.5" id="qap-ML-57z"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="2LP-np-7hV"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <animations/>
