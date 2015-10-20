@@ -35,7 +35,7 @@ class ImageLoader {
             // Start download if image is not cached
             let downloadTask: NSURLSessionDataTask = NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: urlString)!, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
                 // Return nothing in case of error
-                if (error != nil) {
+                if error != nil {
                     completionHandler(image: nil, url: urlString)
                     return
                 }
