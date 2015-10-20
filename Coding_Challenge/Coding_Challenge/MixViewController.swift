@@ -85,7 +85,6 @@ class MixViewController: UIViewController {
         }
         
         // Set InfoLabel
-        
         // Get values of likes & plays if available; otherwise set to 0
         let likesCount = mix?.likesCount ?? 0
         let playsCount = mix?.playsCount ?? 0
