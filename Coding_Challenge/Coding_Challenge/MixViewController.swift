@@ -88,15 +88,13 @@ class MixViewController: UIViewController {
         // Get values of likes & plays if available; otherwise set to 0
         let likesCount = mix?.likesCount ?? 0
         let playsCount = mix?.playsCount ?? 0
-        
         // Build the attributed string
         let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(14)] as Dictionary!
         let infoString = NSMutableAttributedString(string: "\(String.fontAwesomeIconWithName(.Heart)) \(likesCount)    ", attributes: attributes)
         infoString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSRange(location: 0, length: 1))
         let playsInfo = NSAttributedString(string: "\(String.fontAwesomeIconWithName(.Play)) \(playsCount)", attributes: attributes)
         infoString.appendAttributedString(playsInfo)
-        
-        // Set the info label
+        //Assign to label
         infoLabel.attributedText = infoString
     }
     
