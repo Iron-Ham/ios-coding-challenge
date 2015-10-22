@@ -49,11 +49,13 @@ class MixViewController: UIViewController {
         if let artists = mix?.artistList {
             let artistCount = artists.count
             var artistString: String = ""
-            if artistCount <= 3 {
+            if artistCount <= 3 && artistCount != 1 {
                 for var i = 0; i < artistCount - 1; i++ {
                     artistString += "\(artists[i]), "
                 }
                 artistString += "and \(artists.last)"
+            } else if artistCount == 1 {
+                artistString = "\(artists.last)"
             } else {
                 artistString = "\(artists[0]), \(artists[1]), \(artists[2]) and \(artistCount - 3) more"
             }
