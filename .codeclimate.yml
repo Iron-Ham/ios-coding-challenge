@@ -5,3 +5,7 @@ engines:
 ratings:
   paths:
   - "**.swift"
+exclude_paths:
+  - Coding_Challenge/Pods
+  - Coding_Challenge/Coding_ChallengeTests
+  
