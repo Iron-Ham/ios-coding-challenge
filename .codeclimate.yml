@@ -8,4 +8,5 @@ ratings:
 exclude_paths:
   - Coding_Challenge/Pods
   - Coding_Challenge/Coding_ChallengeTests
-  
+  - Coding_Challenge/Coding_ChallengeUITests
+
